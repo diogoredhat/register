@@ -26,5 +26,11 @@ public class Contact {
 		this.email = email;
 	}
 	
-	
+	public String toString() {
+		String contacts;
+		contacts = "Phone: " + this.tel + "\n";
+		contacts += "Cell Phone: " + this.cel + "\n";
+		contacts += "Email: " + this.email;
+		return contacts;
+	}
 }

@@ -1,5 +1,12 @@
-package register;
+/**
+ * 
+ */
+package application;
 
+/**
+ * @author roribeir
+ *
+ */
 public class Contact {
 	private Integer tel;
 	private Integer cel;

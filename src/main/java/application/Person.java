@@ -20,7 +20,7 @@ public class Person {
 		return name;
 	}
 	public void setName(String name) {
-		this.name = name;
+		this.name = name.toLowerCase();
 	}
 	
 	public Date getDob() {
@@ -34,7 +34,7 @@ public class Person {
 		return sex;
 	}
 	public void setSex(Character sex) {
-		this.sex = sex;
+		this.sex = Character.toLowerCase(sex);
 	}
 	
 	public String getCpf() {

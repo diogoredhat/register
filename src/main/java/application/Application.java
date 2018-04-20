@@ -23,7 +23,7 @@ public class Application {
 		p.setName("Teste");
 		p.setCpf("37128723803");
 		p.setDob(d);
-		p.setSex('f');
+		p.setSex('M');
 		p.setContact(c);
 		
 		System.out.println(p.toString());

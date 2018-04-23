@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class Contact extends People{
 	private String email;
-	private Integer ddd;
-	private Integer tel;
-	private Integer cel;
+	private String ddd;
+	private String tel;
+	private String cel;
 	
 	public Contact() {
 		super();
@@ -19,7 +19,7 @@ public class Contact extends People{
 	}
 
 	public Contact(String name, Date dob, Character sex, String cpf, 
-			String email, Integer ddd, Integer tel, Integer cel) {
+			String email, String ddd, String tel, String cel) {
 		super(name, dob, sex, cpf);
 		this.email = email;
 		this.ddd = ddd;
@@ -35,35 +35,35 @@ public class Contact extends People{
 		this.email = email;
 	}
 
-	public Integer getDdd() {
+	public String getDdd() {
 		return ddd;
 	}
 
-	public void setDdd(Integer ddd) {
+	public void setDdd(String ddd) {
 		this.ddd = ddd;
 	}
 
-	public Integer getTel() {
+	public String getTel() {
 		return tel;
 	}
 
-	public void setTel(Integer tel) {
+	public void setTel(String tel) {
 		this.tel = tel;
 	}
 
-	public Integer getCel() {
+	public String getCel() {
 		return cel;
 	}
 
-	public void setCel(Integer cel) {
+	public void setCel(String cel) {
 		this.cel = cel;
 	}
 
 	@Override
 	public String toString() {
 		String contact;
-		contact = "Contact " + super.toString();
-		contact += ", email=" + email + ", ddd=" + ddd + ", tel=" + tel + ", cel=" + cel + "]";
+		contact = "Contact: " + super.toString();
+		contact += ", email=" + email + ", tel= (" + ddd + ") " + tel + ", cel= (" + ddd + ") " + cel + "]";
 		return contact;
 	}
 

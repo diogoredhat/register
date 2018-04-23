@@ -4,15 +4,18 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class User extends People{
-	ArrayList <Contact> contacts;
+	ArrayList <Contact> contacts = new ArrayList<Contact>();
 
-	public User() {
+	public User(Contact contact) {
 		super();
+		this.contacts.add(contact);
+		
 	}
 	
 
-	public User(String name, Date dob, Character sex, String cpf) {
+	public User(String name, Date dob, Character sex, String cpf, Contact contact) {
 		super(name, dob, sex, cpf);
+		this.contacts.add(contact);
 	}
 
 	public User(String name, Date dob, Character sex, String cpf, ArrayList<Contact> contacts) {
@@ -27,12 +30,11 @@ public class User extends People{
 
 	@Override
 	public String toString() {
-		String user = "User " + super.toString();
-		user += ", contacts [";
-		for (Contact c: contacts) {
-			user += c.toString();
+		String user = "User: \n" + super.toString() + "]";
+		user += "\nContacts: \n";
+		for(int i=0; i<contacts.size(); i++) {
+			user += contacts.get(i).toString() + "\n";
 		}
-		user += "]]";
 		return user;
 	}
 	

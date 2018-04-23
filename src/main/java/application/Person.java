@@ -16,6 +16,19 @@ public class Person {
 	private String cpf;
 	private Contact contact;
 	
+	public Person() {
+	}
+	
+	public Person(String name, Date dob, Character sex, String cpf, Contact contact) {
+		this.name = name;
+		this.dob = dob;
+		this.sex = sex;
+		this.cpf = cpf;
+		this.contact = contact;
+	}
+
+
+
 	public String getName() {
 		return name;
 	}

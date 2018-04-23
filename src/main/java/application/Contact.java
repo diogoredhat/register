@@ -12,6 +12,14 @@ public class Contact {
 	private Integer cel;
 	private String email;
 	
+	public Contact() {}
+	
+	public Contact(Integer tel, Integer cel, String email) {
+		this.tel = tel;
+		this.cel = cel;
+		this.email = email;
+	}
+
 	public Integer getTel() {
 		return tel;
 	}

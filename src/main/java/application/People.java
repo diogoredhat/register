@@ -9,22 +9,20 @@ import java.util.Date;
  * @author roribeir
  *
  */
-public class Person {
+public abstract class People {
 	private String name;
 	private Date dob;
 	private Character sex;
 	private String cpf;
-	private Contact contact;
 	
-	public Person() {
+	public People() {
 	}
 	
-	public Person(String name, Date dob, Character sex, String cpf, Contact contact) {
+	public People(String name, Date dob, Character sex, String cpf) {
 		this.name = name;
 		this.dob = dob;
 		this.sex = sex;
 		this.cpf = cpf;
-		this.contact = contact;
 	}
 
 
@@ -56,22 +54,12 @@ public class Person {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
-	public String getContact() {
-		return contact.toString();
-	}
-	public void setContact(Contact contact) {
-		this.contact = contact;
-	}
-	
+
+	@Override
 	public String toString() {
-		String person;
-		person = "Name: " + this.name + "\n";
-		person += "Date of Birthday: " + this.dob + "\n";
-		person += "CPF: " + this.cpf + "\n";
-		person += "Sex: " + ((sex.compareTo('m') == 0)? "Male" : "Female") + "\n";
-		person += "Contacs: \n" + this.contact.toString();
-		return person;
+		return "[name=" + name + ", dob=" + dob + ", sex=" + sex + ", cpf=" + cpf;
 	}
+	
+	
 	
 }

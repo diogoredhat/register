@@ -1,51 +1,72 @@
-/**
- * 
- */
 package application;
 
-/**
- * @author roribeir
- *
- */
-public class Contact {
+import java.util.Date;
+
+public class Contact extends People{
+	private String email;
+	private Integer ddd;
 	private Integer tel;
 	private Integer cel;
-	private String email;
 	
-	public Contact() {}
-	
-	public Contact(Integer tel, Integer cel, String email) {
+	public Contact() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Contact(String name, Date dob, Character sex, String cpf) {
+		super(name, dob, sex, cpf);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Contact(String name, Date dob, Character sex, String cpf, 
+			String email, Integer ddd, Integer tel, Integer cel) {
+		super(name, dob, sex, cpf);
+		this.email = email;
+		this.ddd = ddd;
 		this.tel = tel;
 		this.cel = cel;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public Integer getDdd() {
+		return ddd;
+	}
+
+	public void setDdd(Integer ddd) {
+		this.ddd = ddd;
 	}
 
 	public Integer getTel() {
 		return tel;
 	}
+
 	public void setTel(Integer tel) {
 		this.tel = tel;
 	}
-	
+
 	public Integer getCel() {
 		return cel;
 	}
+
 	public void setCel(Integer cel) {
 		this.cel = cel;
 	}
-	
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
+
+	@Override
 	public String toString() {
-		String contacts;
-		contacts = "Phone: " + this.tel + "\n";
-		contacts += "Cell Phone: " + this.cel + "\n";
-		contacts += "Email: " + this.email;
-		return contacts;
+		String contact;
+		contact = "Contact " + super.toString();
+		contact += ", email=" + email + ", ddd=" + ddd + ", tel=" + tel + ", cel=" + cel + "]";
+		return contact;
 	}
+
+	
+	
 }

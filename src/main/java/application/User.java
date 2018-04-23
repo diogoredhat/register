@@ -30,7 +30,10 @@ public class User extends People{
 
 	@Override
 	public String toString() {
-		String user = "User: \n" + super.toString() + "]";
+		String user = "User: \n";
+		int space = super.toString().indexOf(',');
+		user += super.toString().substring(6, space);
+		user += ": [" + super.toString().substring(space+2) + "]";
 		user += "\nContacts: \n";
 		for(int i=0; i<contacts.size(); i++) {
 			user += contacts.get(i).toString() + "\n";

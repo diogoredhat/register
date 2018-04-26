@@ -15,17 +15,29 @@ public abstract class People {
 	private Character sex;
 	private String cpf;
 	
-	public People() {
+	public People(String name) {
+		this.setName(name);
+	}
+	
+	public People(String name, String cpf) {
+		this(name);
+		this.cpf = cpf;
+	}
+	
+	public People(String name, Character sex, String cpf) {
+		this(name, cpf);
+		this.setSex(sex);
+	}
+	
+	public People(String name, Date dob, String cpf) {
+		this(name, cpf);
+		this.dob = dob;
 	}
 	
 	public People(String name, Date dob, Character sex, String cpf) {
-		this.name = name;
-		this.dob = dob;
-		this.sex = sex;
-		this.cpf = cpf;
+		this(name, dob, cpf);
+		this.setSex(sex);
 	}
-
-
 
 	public String getName() {
 		return name;

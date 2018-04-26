@@ -8,8 +8,8 @@ public class Contact extends People{
 	private String tel;
 	private String cel;
 	
-	public Contact() {
-		super();
+	public Contact(String name, String cpf) {
+		super(name, cpf);
 		// TODO Auto-generated constructor stub
 	}
 

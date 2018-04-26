@@ -6,12 +6,14 @@ import java.util.Date;
 public class User extends People{
 	ArrayList <Contact> contacts = new ArrayList<Contact>();
 
-	public User(Contact contact) {
-		super();
-		this.contacts.add(contact);
-		
+	public User(String nome, String cpf) {
+		super(nome, cpf);
 	}
 	
+	public User(String name, String cpf, Contact contact) {
+		super(name, cpf);
+		this.contacts.add(contact);
+	}
 
 	public User(String name, Date dob, Character sex, String cpf, Contact contact) {
 		super(name, dob, sex, cpf);

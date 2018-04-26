@@ -5,11 +5,4 @@
 	<version>0.1</version>
 	<name>Register</name>
 	<description>A simple people register</description>
-	<dependencies>
-		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
-			<version>2.2.3</version>
-		</dependency>
-	</dependencies>
 </project>

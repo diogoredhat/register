@@ -62,11 +62,12 @@ public class Contact extends People{
 	@Override
 	public String toString() {
 		String contact;
-		contact = "Contact: " + super.toString();
+		int space = super.toString().indexOf(',');
+		contact = super.toString().substring(6, space);
+		contact += ": [" + super.toString().substring(space+2);
 		contact += ", email=" + email + ", tel= (" + ddd + ") " + tel + ", cel= (" + ddd + ") " + cel + "]";
 		return contact;
 	}
-
 	
 	
 }

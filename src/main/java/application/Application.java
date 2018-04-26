@@ -16,15 +16,10 @@ public class Application {
 	 */
 	public static void main(String[] args) {
 		
-		Contact c = new Contact();
-		User p = new User(c);
+		Contact c = new Contact("Contact Name Test", "11122233344");
 		Date d = new Date();
+		User p = new User("User Name Test", d, 'M', "55566677788", c);		
 		
-		
-		p.setName("Teste");
-		p.setCpf("37128723803");
-		p.setDob(d);
-		p.setSex('M');
 		p.addContact(c);
 		
 		System.out.println(p.toString());

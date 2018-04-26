@@ -2,3 +2,4 @@
 
 DB Diagram
 
+![DB Diagram](img/DBDiagram.png)

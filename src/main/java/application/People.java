@@ -57,7 +57,7 @@ public abstract class People {
 
 	@Override
 	public String toString() {
-		return "[name=" + name + ", dob=" + dob + ", sex=" + ((sex == 'm') ? "Male": "Female") + ", cpf=" + cpf;
+		return "[name=" + name + ", dob=" + dob + ", sex=" + sex + ", cpf=" + cpf;
 	}
 	
 	

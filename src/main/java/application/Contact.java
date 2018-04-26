@@ -62,9 +62,7 @@ public class Contact extends People{
 	@Override
 	public String toString() {
 		String contact;
-		int space = super.toString().indexOf(',');
-		contact = super.toString().substring(6, space);
-		contact += ": [" + super.toString().substring(space+2);
+		contact = "Contact: " + super.toString();
 		contact += ", email=" + email + ", tel= (" + ddd + ") " + tel + ", cel= (" + ddd + ") " + cel + "]";
 		return contact;
 	}

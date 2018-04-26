@@ -20,7 +20,6 @@ public class Application {
 		User p = new User(c);
 		Date d = new Date();
 		
-		c.setSex('F');
 		
 		p.setName("Teste");
 		p.setCpf("37128723803");

@@ -3,7 +3,17 @@ package application;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class User extends People{
+	
+	@Id
+	@GeneratedValue
+	private int id;
+	
 	ArrayList <Contact> contacts = new ArrayList<Contact>();
 
 	public User(String nome, String cpf) {

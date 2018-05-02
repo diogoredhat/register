@@ -29,7 +29,7 @@ public class Application {
 		
 		//System.out.println(p.toString());
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("defualt");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
 		
 		EntityManager em = emf.createEntityManager();
 		

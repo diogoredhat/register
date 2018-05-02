@@ -27,7 +27,7 @@ public class Application {
 		
 		p.addContact(c);
 		
-		System.out.println(p.toString());
+		//System.out.println(p.toString());
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("defualt");
 		
@@ -40,6 +40,12 @@ public class Application {
 		}
 		
 		
+		em.getTransaction();
+		em.persist(p);
+		em.getTransaction().commit();
+		
+		em.close();
+		emf.close();
 	}
 
 }

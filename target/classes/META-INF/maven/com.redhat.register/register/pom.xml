@@ -5,4 +5,16 @@
 	<version>0.1</version>
 	<name>Register</name>
 	<description>A simple people register</description>
+	<dependencies>
+        	<dependency>
+            		<groupId>org.hibernate</groupId>
+            		<artifactId>hibernate-entitymanager</artifactId>
+            		<version>4.3.7.Final</version>
+        	</dependency>
+        	<dependency>
+            		<groupId>org.hsqldb</groupId>
+            		<artifactId>hsqldb</artifactId>
+       	    		<version>2.3.2</version>
+        	</dependency>
+   	</dependencies>
 </project>

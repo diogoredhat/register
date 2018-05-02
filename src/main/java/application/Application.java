@@ -4,6 +4,11 @@
 package application;
 
 import java.util.Date;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
  * @author roribeir
@@ -23,6 +28,18 @@ public class Application {
 		p.addContact(c);
 		
 		System.out.println(p.toString());
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("defualt");
+		
+		EntityManager em = emf.createEntityManager();
+		
+		List<User> user = em.createQuery("FROM user", User.class).getResultList();
+		
+		for(User u: user) {
+			System.out.println(u.toString());
+		}
+		
+		
 	}
 
 }
